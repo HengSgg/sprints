@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: sebcontents/client
+    restart: 'always'
+    ports:
+      - "8080:80"
+    container_name: client
+
+  node:
+    image: sebcontents/server
+    restart: 'always'
+    ports:
+      - "4999:80"
+    container_name: server
